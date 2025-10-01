@@ -1,4 +1,131 @@
-/* Specific styles for the Services page */
+/* Services page styles - Updated for real estate focus */
+
+/* Stats section for real estate metrics */
+.stats-section {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border-radius: 16px;
+  padding: 40px 20px;
+  margin: 40px auto;
+  max-width: 1000px;
+  border: 1px solid rgba(249, 115, 22, 0.1);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.stat-card {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(249, 115, 22, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(249, 115, 22, 0.15);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #f97316;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  font-size: 0.95rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* Service card enhancements */
+.service-badge {
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.featured {
+  border: 2px solid #f97316 !important;
+  position: relative;
+}
+
+.featured::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, #f97316, #ea580c);
+  border-radius: 18px;
+  z-index: -1;
+  opacity: 0.1;
+}
+
+.service-features {
+  margin: 20px 0;
+}
+
+.service-features h4 {
+  color: #1e293b;
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feature-list li {
+  padding: 6px 0;
+  color: #475569;
+  position: relative;
+  padding-left: 24px;
+}
+
+.feature-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #f97316;
+  font-weight: bold;
+}
+
+.roi-highlight {
+  background: rgba(249, 115, 22, 0.08);
+  border-left: 4px solid #f97316;
+  padding: 12px 16px;
+  margin: 16px 0;
+  border-radius: 4px;
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #64748b;
+  font-size: 1.1rem;
+  margin-top: 12px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .services-grid {
   display: grid;
@@ -12,40 +139,43 @@
 }
 
 .service-card {
-  background: rgba(30,41,59,0.90);
-  border-radius: 18px;
-  box-shadow: 0 2px 24px 0 rgba(20,184,166,0.07);
-  padding: 32px 20px;
-  color: #e6f7f7;
-  font-size: 1.1rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  padding: 32px 28px;
+  color: #1e293b;
+  font-size: 1.05rem;
   text-align: left;
-  transition: transform 0.18s, box-shadow 0.18s;
-  border: 1.5px solid #14b8a6;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(226, 232, 240, 0.8);
   width: 100%;
-  max-width: 600px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .service-card:hover {
-  transform: translateY(-4px) scale(1.03);
-  box-shadow: 0 8px 32px 0 rgba(20,184,166,0.18);
-  border-color: #06b6d4;
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(249, 115, 22, 0.15);
+  border-color: rgba(249, 115, 22, 0.3);
 }
 
 .service-title {
-  color: #14b8a6;
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 12px;
+  color: #1e293b;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  line-height: 1.3;
 }
 
 .section-title {
-  color: #fff; 
-  font-size: 1.8rem; 
-  font-weight: 600; 
+  color: #1e293b; 
+  font-size: 2.2rem; 
+  font-weight: 700; 
   text-align: center;
   width: 100%;
-  margin-top: 20px;
-  margin-bottom: 8px;
+  margin-top: 30px;
+  margin-bottom: 16px;
+  line-height: 1.2;
 }
 
 .section-container {

@@ -3,8 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Contact Me, Myself Plus AI for a discovery call or to learn more about our agentic automation services." />
-  <title>Contact | Me, Myself Plus AI</title>
+  <meta name="description" content="Get your free real estate automation consultation. Book a call to discover how to save 20+ hours weekly and close more deals in Nashville." />
+  <title>Free Nashville Real Estate Automation Consultation | Book Now | Me, Myself Plus AI</title>
+  
+  <!-- Additional SEO meta tags -->
+  <meta name="robots" content="index, follow" />
+  <meta name="geo.region" content="US-TN" />
+  <meta name="geo.placename" content="Nashville, Tennessee" />
   <link rel="icon" type="image/png" href="public/images/FullLogo_Transparent_NoBuffer.png" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Roboto+Mono&display=swap" rel="stylesheet">
@@ -22,37 +27,82 @@
       <a href="index.html" class="nav-link-default">Home</a>
       <a href="about.html" class="nav-link-default">About</a>
       <a href="services.html" class="nav-link-default">Services</a>
-      <a href="projects.html" class="nav-link-default">Projects</a>
-      <a href="blog/index.html" class="nav-link-default">Resources</a>
       <a href="contact.html" class="nav-link-current">Contact</a>
     </nav>
   </div>
   
   <div class="main-content">
     <img src="public/images/FullLogo_Transparent_NoBuffer.png" alt="Me Myself Plus AI Logo" class="logo" />
+    <div class="headline">Ready to Reclaim 20+ Hours Every Week?</div>
+    <div class="subheadline">Book your free consultation to discover which automation solutions will have the biggest impact on your real estate business.</div>
     <div class="calendly-cta-container">
-      <a href="https://calendly.com/matthew-memyselfplusai/30min" class="calendly-cta-button" target="_blank" rel="noopener">Book a demo now</a>
+      <a href="https://calendly.com/matthew-memyselfplusai/30min" class="calendly-cta-button primary-cta" target="_blank" rel="noopener">📅 Book Your Free 30-Minute Strategy Call</a>
     </div>
-    <div class="headline">Contact Us</div>
     <div class="contact-section">
-      <!-- Formspree form with n8n integration via email -->
-      <form id="contact-form" action="https://formspree.io/f/xrgdvyjv" method="POST" class="contact-form">
-          <input type="hidden" name="_subject" value="New Website Contact Form Submission">
+      <div class="form-intro">
+        <h3>📝 Or Tell Us About Your Business Below</h3>
+        <p>Help us understand your current challenges so we can provide the most relevant solutions during your consultation.</p>
+      </div>
+      
+      <!-- Enhanced lead qualification form -->
+      <form id="contact-form" action="https://formspree.io/f/xrgdvyjv" method="POST" class="contact-form enhanced">
+          <input type="hidden" name="_subject" value="New Real Estate Lead - Website Contact Form">
           <input type="hidden" name="form_source" value="memyselfplusai.com">
           <input type="hidden" name="submission_timestamp" id="timestamp-field">
-          <div class="form-field">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" id="name" name="name" required class="form-input">
+          
+          <div class="form-row">
+            <div class="form-field half">
+              <label for="name" class="form-label">Full Name *</label>
+              <input type="text" id="name" name="name" required class="form-input">
+            </div>
+            <div class="form-field half">
+              <label for="email" class="form-label">Email Address *</label>
+              <input type="email" id="email" name="email" required class="form-input">
+            </div>
           </div>
-          <div class="form-field">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" id="email" name="email" required class="form-input">
+          
+          <div class="form-row">
+            <div class="form-field half">
+              <label for="phone" class="form-label">Phone Number</label>
+              <input type="tel" id="phone" name="phone" class="form-input">
+            </div>
+            <div class="form-field half">
+              <label for="business_type" class="form-label">I am a... *</label>
+              <select id="business_type" name="business_type" required class="form-select">
+                <option value="">Select one</option>
+                <option value="individual_agent">Individual Real Estate Agent</option>
+                <option value="team_leader">Team Leader</option>
+                <option value="broker_owner">Broker/Owner</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
           </div>
+          
           <div class="form-field">
-            <label for="message" class="form-label">Message</label>
-            <textarea id="message" name="message" rows="5" required class="form-textarea"></textarea>
+            <label for="main_challenge" class="form-label">What's your biggest time-waster right now? *</label>
+            <select id="main_challenge" name="main_challenge" required class="form-select">
+              <option value="">Select your main challenge</option>
+              <option value="lead_response">Slow lead response times</option>
+              <option value="admin_tasks">Too much administrative work</option>
+              <option value="follow_up">Inconsistent follow-up with leads</option>
+              <option value="paperwork">Manual paperwork and contracts</option>
+              <option value="marketing">Creating marketing materials</option>
+              <option value="client_communication">Managing client communication</option>
+              <option value="other">Something else</option>
+            </select>
           </div>
-          <button type="submit" class="form-button">Send Message</button>
+          
+          <div class="form-field">
+            <label for="current_tools" class="form-label">What tools do you currently use? (CRM, lead sources, etc.)</label>
+            <textarea id="current_tools" name="current_tools" rows="3" class="form-textarea" placeholder="e.g., Chime, BoomTown, Zillow leads..."></textarea>
+          </div>
+          
+          <div class="form-field">
+            <label for="message" class="form-label">Anything else you'd like us to know?</label>
+            <textarea id="message" name="message" rows="4" class="form-textarea" placeholder="Tell us about your goals, current pain points, or specific questions..."></textarea>
+          </div>
+          
+          <button type="submit" class="form-button primary-cta">🚀 Get My Free Automation Strategy</button>
       </form>
       <div id="form-error" class="hidden" style="color: red; margin-top: 1em;">Something went wrong. Please try again later.</div>
       <!-- Success message, hidden by default -->
