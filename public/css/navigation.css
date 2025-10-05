@@ -1,4 +1,4 @@
-/* Navigation styles for Me Myself Plus AI website */
+/* Navigation styles for M2AI Real Estate website */
 
 /* Fixed navigation header */
 .header-container {
@@ -19,14 +19,16 @@
   will-change: transform; /* Optimize for animations */
 }
 
-/* Navigation menu */
-.main-nav {
+/* Navigation menu - Responsive spacing */
+.main-nav,
+.header-nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2.5rem;
+  gap: clamp(1.5rem, 4vw, 3rem); /* Responsive gap prevents crowding */
   font-family: 'Inter', sans-serif;
   font-size: 1.08rem;
+  padding: 0 1rem; /* Prevent edge crowding */
 }
 
 /* Navigation links - Updated for professional real estate theme */
@@ -73,13 +75,28 @@
 }
 
 /* Mobile responsiveness */
-@media (max-width: 600px) {
-  .main-nav {
+@media (max-width: 768px) {
+  .main-nav,
+  .header-nav {
     font-size: 0.95rem;
-    gap: 1.5rem;
+    gap: clamp(0.75rem, 3vw, 1.5rem);
   }
-  
-  .nav-link {
-    padding: 4px 8px;
+
+  .nav-link-default,
+  .nav-link-current {
+    padding: 8px 12px;
+    min-height: 48px; /* Touch target minimum */
+  }
+}
+
+@media (max-width: 600px) {
+  .main-nav,
+  .header-nav {
+    gap: 1rem;
+  }
+
+  .nav-link-default,
+  .nav-link-current {
+    padding: 6px 10px;
   }
 }

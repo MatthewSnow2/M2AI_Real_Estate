@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Real estate automation solutions for Nashville agents. Save 20+ hours weekly with AI voice agents, CRM automation, lead nurturing, and transaction management." />
-  <title>AI Voice Agents & CRM Automation for Nashville Real Estate | Me, Myself Plus AI</title>
+  <title>AI Voice Agents & CRM Automation for Nashville Real Estate | M2AI Real Estate</title>
   
   <!-- Additional SEO meta tags -->
   <meta name="robots" content="index, follow" />
@@ -19,7 +19,7 @@
     "serviceType": "Real Estate Automation Services",
     "provider": {
       "@type": "LocalBusiness",
-      "name": "Me, Myself Plus AI",
+      "name": "M2AI Real Estate",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Nashville",
@@ -48,32 +48,39 @@
     ]
   }
   </script>
-  <link rel="icon" type="image/png" href="public/images/FullLogo_Transparent_NoBuffer.png" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" />
+  <link rel="icon" type="image/png" href="public/images/M2AI_Logo_New.png" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="public/css/typography.css">
+  <link rel="stylesheet" href="public/css/accessibility.css">
   <link rel="stylesheet" href="public/css/navigation.css">
   <link rel="stylesheet" href="public/css/main.css">
   <link rel="stylesheet" href="public/css/services.css">
+  <link rel="stylesheet" href="public/css/real-estate-theme.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" />
   <!-- Styles moved to external CSS files -->
 </head>
 <body>
+  <!-- Skip to main content link -->
+  <a href="#main-content" class="skip-to-main">Skip to main content</a>
+
   <canvas id="bg-canvas"></canvas>
-  
-  <!-- Fixed navigation header using classes from external CSS -->
-  <div class="header-nav-container">
-    <nav class="header-nav">
+
+  <!-- Fixed navigation header -->
+  <header class="header-nav-container">
+    <nav class="header-nav" aria-label="Main navigation">
       <a href="index.html" class="nav-link-default">Home</a>
       <a href="about.html" class="nav-link-default">About</a>
-      <a href="services.html" class="nav-link-current">Services</a>
+      <a href="services.html" class="nav-link-current" aria-current="page">Services</a>
       <a href="contact.html" class="nav-link-default">Contact</a>
     </nav>
-  </div>
-  
-  <div class="main-content">
-    <img src="public/images/FullLogo_Transparent_NoBuffer.png" alt="Me Myself Plus AI Logo" class="logo" />
-    <div class="headline">Real Estate Automation Solutions That Actually Work</div>
-    <div class="subheadline">Stop losing deals to slow response times. Automate the busy work and focus on what you do best - closing deals.</div>
+  </header>
+
+  <main id="main-content" class="main-content">
+    <img src="public/images/M2AI_Logo_New.png" alt="M2AI Real Estate - AI Automation for Real Estate Professionals" class="logo" />
+    <h1 class="headline colored-headline services-headline-white">Real Estate Automation Solutions That Actually Work</h1>
+    <p class="subheadline services-subheadline-light">Stop losing deals to slow response times. Automate the busy work and focus on what you do best - closing deals.</p>
     <div class="services-grid">
+      <!-- Stats Section -->
       <div class="stats-section">
         <h2 class="section-title">📈 Real Results for Nashville Real Estate Professionals</h2>
         <div class="stats-grid">
@@ -95,40 +102,14 @@
           </div>
         </div>
       </div>
-      
-      <div class="section-container">
-        <h2 class="section-title">🏠 Solutions Tailored for Real Estate Success</h2>
-        <p class="section-subtitle">Every solution is designed specifically for the unique challenges Tennessee real estate professionals face daily.</p>
-      </div>
-      
-      <div class="service-card featured">
-        <div class="service-badge">Most Popular</div>
-        <div class="service-title">📢 24/7 AI Voice Agents & Lead Response</div>
-        <div>
-          <p><strong>Never Miss Another Lead While You're Showing Properties</strong></p>
-          <p>Your AI voice agent answers calls instantly, qualifies leads using BANT framework, schedules showings, and sends you detailed summaries - all while sounding completely natural and professional.</p>
-          
-          <div class="service-features">
-            <h4>What It Does:</h4>
-            <ul class="feature-list">
-              <li>✓ Answers calls within 2 rings, 24/7/365</li>
-              <li>✓ Qualifies leads (budget, timeline, preferences)</li>
-              <li>✓ Books appointments directly to your calendar</li>
-              <li>✓ Sends instant text summaries of each call</li>
-              <li>✓ Handles multiple calls simultaneously</li>
-            </ul>
-          </div>
-          
-          <p class="roi-highlight"><strong>ROI:</strong> Agents using AI voice response close 30% more deals by never missing hot leads</p>
-        </div>
-      </div>
-      
+
+      <!-- Smart CRM Card -->
       <div class="service-card">
         <div class="service-title">⚙️ Smart CRM & Transaction Automation</div>
         <div>
           <p><strong>Stop Drowning in Paperwork - Let Automation Handle It</strong></p>
           <p>Automatically update your CRM, generate contracts, track deadlines, and manage the entire transaction workflow from listing to closing.</p>
-          
+
           <div class="service-features">
             <h4>Automated Workflows Include:</h4>
             <ul class="feature-list">
@@ -139,17 +120,47 @@
               <li>✓ Compliance documentation for Tennessee regulations</li>
             </ul>
           </div>
-          
+
           <p class="roi-highlight"><strong>Time Saved:</strong> 15+ hours per week on administrative tasks</p>
         </div>
       </div>
-      
+
+      <!-- 24/7 AI Voice Agents Card -->
+      <div class="service-card featured">
+        <div class="service-badge">Most Popular</div>
+        <div class="service-title">📢 24/7 AI Voice Agents & Lead Response</div>
+        <div>
+          <p><strong>Never Miss Another Lead While You're Showing Properties</strong></p>
+          <p>Your AI voice agent answers calls instantly, qualifies leads using BANT framework, schedules showings, and sends you detailed summaries - all while sounding completely natural and professional.</p>
+
+          <div class="service-features">
+            <h4>What It Does:</h4>
+            <ul class="feature-list">
+              <li>✓ Answers calls within 2 rings, 24/7/365</li>
+              <li>✓ Qualifies leads (budget, timeline, preferences)</li>
+              <li>✓ Books appointments directly to your calendar</li>
+              <li>✓ Sends instant text summaries of each call</li>
+              <li>✓ Handles multiple calls simultaneously</li>
+            </ul>
+          </div>
+
+          <p class="roi-highlight"><strong>ROI:</strong> Agents using AI voice response close 30% more deals by never missing hot leads</p>
+        </div>
+      </div>
+
+      <!-- Solutions Tailored Section - CENTERED -->
+      <div class="section-container section-container-centered">
+        <h2 class="section-title section-title-centered">🏠 Solutions Tailored for Real Estate Success</h2>
+        <p class="section-subtitle section-subtitle-centered">Every solution is designed specifically for the unique challenges Tennessee real estate professionals face daily.</p>
+      </div>
+
+      <!-- Intelligent Lead Scoring Card -->
       <div class="service-card">
         <div class="service-title">🎯 Intelligent Lead Scoring & Nurturing</div>
         <div>
           <p><strong>Focus on Hot Leads, Not Cold Calls</strong></p>
           <p>Our AI analyzes 25+ data sources to identify homeowners most likely to move within 6-12 months with 72% accuracy, then automatically nurtures them until they're ready to buy or sell.</p>
-          
+
           <div class="service-features">
             <h4>Smart Lead Intelligence:</h4>
             <ul class="feature-list">
@@ -160,17 +171,18 @@
               <li>✓ Personalized follow-up recommendations</li>
             </ul>
           </div>
-          
+
           <p class="roi-highlight"><strong>Result:</strong> 3x higher conversion rates on qualified leads</p>
         </div>
       </div>
-      
+
+      <!-- Smart Document Card -->
       <div class="service-card">
         <div class="service-title">📋 Smart Document & Compliance Management</div>
         <div>
           <p><strong>Never Miss a Deadline or Compliance Requirement Again</strong></p>
           <p>Automatically generate contracts, track deadlines, ensure Tennessee regulatory compliance, and manage the entire paper trail from listing to closing.</p>
-          
+
           <div class="service-features">
             <h4>Complete Transaction Management:</h4>
             <ul class="feature-list">
@@ -181,17 +193,18 @@
               <li>✓ Commission calculation and tracking</li>
             </ul>
           </div>
-          
+
           <p class="roi-highlight"><strong>Benefit:</strong> Close deals 40% faster with zero compliance errors</p>
         </div>
       </div>
-      
+
+      <!-- Marketing Automation Card -->
       <div class="service-card">
         <div class="service-title">🏡 Marketing Automation & Virtual Staging</div>
         <div>
           <p><strong>Professional Marketing That Runs Itself</strong></p>
           <p>Automatically create stunning property listings, schedule social media posts, send market updates to your sphere, and showcase properties with virtual staging.</p>
-          
+
           <div class="service-features">
             <h4>Complete Marketing Suite:</h4>
             <ul class="feature-list">
@@ -202,17 +215,18 @@
               <li>✓ Email newsletter automation for past clients</li>
             </ul>
           </div>
-          
+
           <p class="roi-highlight"><strong>Impact:</strong> Properties with virtual staging sell 73% faster</p>
         </div>
       </div>
-      
+
+      <!-- Book Consultation Button - AT BOTTOM, CENTERED -->
       <div class="section-container">
-        <a href="contact.html" class="cta-button">
+        <a href="contact.html" class="cta-button services-cta-button">
           Book a Free Consultation
         </a>
       </div>
-      
+
     </div>
   </div>
   <script>

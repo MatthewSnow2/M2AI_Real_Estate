@@ -1,13 +1,13 @@
-# Me, Myself Plus AI
+# M2AI Real Estate
 
-A boutique AI studio in Nashville specializing in custom autonomous-agent solutions for small-to-mid-size businesses.
+AI-powered real estate automation solutions helping Nashville professionals save 20+ hours weekly while closing more deals.
 
 ## Features
-- Fully responsive, production-ready website
-- Modern, pragmatic, friendly tech-expert brand voice
+- Fully responsive real estate website
+- Modern, professional real estate automation focus
 - Built with HTML5, Tailwind CSS v3, and vanilla JS
-- Node/Express server stub for contact form
-- SEO & accessibility optimized
+- Contact forms and lead capture
+- SEO optimized for Nashville real estate market
 
 ## Setup
 
@@ -20,10 +20,11 @@ npm run build    # For production (PostCSS pipeline)
 ---
 
 - All static assets are in `/public/images/`
-- Main logo: `FullLogo_Transparent_NoBuffer.png`
-- Pages: Home, Services, Projects, About, Blog, Contact
+- Main logo: `M2AI_Logo_New.png`
+- Pages: Home, Services, About, Contact
+- Focus: Real estate automation, AI voice agents, CRM integration
 
 ---
 
 **Contact:**
-Book a discovery call or reach out via the contact form!
+Book a free 30-minute strategy call to discover how to save 20+ hours weekly with real estate automation!

@@ -1,0 +1,406 @@
+/* Modern Real Estate Theme CSS for M2AI Real Estate */
+
+:root {
+  /* Real Estate Color Palette */
+  --re-navy: #002349;
+  --re-gold: #957C3D;
+  --re-blue: #2563eb;
+  --re-light-blue: #3b82f6;
+  --re-teal: #14b8a6;
+  --re-white: #ffffff;
+  --re-gray-100: #f8fafc;
+  --re-gray-200: #e2e8f0;
+  --re-gray-300: #cbd5e1;
+  --re-gray-600: #475569;
+  --re-gray-800: #1e293b;
+  --re-gray-900: #0f172a;
+  
+  /* Gradients */
+  --re-gradient-hero: linear-gradient(135deg, #002349 0%, #2563eb 50%, #14b8a6 100%);
+  --re-gradient-card: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+  --re-gradient-button: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+  --re-gradient-accent: linear-gradient(90deg, #957C3D 0%, #14b8a6 100%);
+  
+  /* Shadows */
+  --re-shadow-soft: 0 4px 6px -1px rgba(0, 35, 73, 0.1), 0 2px 4px -1px rgba(0, 35, 73, 0.06);
+  --re-shadow-medium: 0 10px 15px -3px rgba(0, 35, 73, 0.1), 0 4px 6px -2px rgba(0, 35, 73, 0.05);
+  --re-shadow-large: 0 20px 25px -5px rgba(0, 35, 73, 0.1), 0 10px 10px -5px rgba(0, 35, 73, 0.04);
+}
+
+/* Enhanced Background */
+body {
+  background: var(--re-gradient-hero);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(149, 124, 61, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(20, 184, 166, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(37, 99, 235, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Logo Container for Maximum Impact */
+.logo-container {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 30px;
+  padding: 2rem;
+  margin: 2rem auto 3rem auto;
+  text-align: center;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  max-width: 600px;
+}
+
+/* Logo Styling - Enhanced for Maximum Impact */
+.logo {
+  max-width: 480px;
+  width: 90%;
+  height: auto;
+  margin: 2rem auto;
+  display: block;
+  filter: drop-shadow(0 8px 16px rgba(0, 35, 73, 0.3)) drop-shadow(0 4px 8px rgba(0, 35, 73, 0.2));
+  transition: all 0.4s ease;
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  border-radius: 20px;
+  padding: 1rem;
+  position: relative;
+}
+
+/* Main Page Logo - 1.5x Larger */
+.logo-main {
+  max-width: 720px; /* 480px * 1.5 */
+  width: 95%;
+  transform: scale(1.0);
+  filter: drop-shadow(0 12px 24px rgba(0, 35, 73, 0.4)) drop-shadow(0 6px 12px rgba(0, 35, 73, 0.3));
+}
+
+.logo::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: linear-gradient(45deg, rgba(149, 124, 61, 0.3), rgba(20, 184, 166, 0.3), rgba(37, 99, 235, 0.3));
+  border-radius: 25px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.logo:hover {
+  transform: scale(1.08) translateY(-5px);
+  filter: drop-shadow(0 12px 24px rgba(0, 35, 73, 0.4)) drop-shadow(0 6px 12px rgba(149, 124, 61, 0.3));
+}
+
+.logo:hover::before {
+  opacity: 1;
+}
+
+/* Enhanced Headlines */
+.headline {
+  background: var(--re-gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: none;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+.colored-headline {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+/* Enhanced Buttons - High Visibility with ORANGE gradient */
+.cta-button, .primary-cta {
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%); /* Orange gradient */
+  color: #ffffff !important;
+  padding: 1.25rem 2.5rem; /* Larger touch targets */
+  font-size: 1.25rem; /* Bigger text */
+  font-weight: 700;
+  border-radius: 12px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  box-shadow: 0 8px 24px rgba(249, 115, 22, 0.4);
+  border: 3px solid transparent;
+  position: relative;
+  overflow: hidden;
+  min-height: 44px; /* Touch target minimum */
+  cursor: pointer;
+}
+
+.cta-button::before, .primary-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.cta-button:hover, .primary-cta:hover {
+  transform: scale(1.05); /* Grow on hover */
+  box-shadow: 0 12px 32px rgba(249, 115, 22, 0.6);
+  background: linear-gradient(135deg, #ea580c 0%, #f97316 100%); /* Reversed gradient */
+}
+
+.cta-button:hover::before, .primary-cta:hover::before {
+  left: 100%;
+}
+
+/* Focus states for accessibility */
+.cta-button:focus-visible, .primary-cta:focus-visible {
+  outline: 4px solid #2563eb;
+  outline-offset: 4px;
+  border-color: #fff;
+}
+
+/* Audit CTA - Pulse Animation */
+.audit-cta {
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 8px 24px rgba(249, 115, 22, 0.4); }
+  50% { box-shadow: 0 8px 32px rgba(249, 115, 22, 0.7); }
+}
+
+/* Secondary CTA - Less prominent but still visible */
+.secondary-cta {
+  background: transparent;
+  color: #f97316 !important;
+  border: 3px solid #f97316;
+  padding: 1.25rem 2.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.secondary-cta:hover {
+  background: #f97316;
+  color: #ffffff !important;
+  border-color: #f97316;
+  transform: scale(1.05);
+}
+
+/* Card Enhancements */
+.about-section, .agent-card, .service-item {
+  background: var(--re-gradient-card);
+  border-radius: 16px;
+  padding: 2rem;
+  margin: 1.5rem 0;
+  box-shadow: var(--re-shadow-medium);
+  border: 1px solid rgba(203, 213, 225, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-section::before, .agent-card::before, .service-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--re-gradient-accent);
+}
+
+.about-section:hover, .agent-card:hover, .service-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--re-shadow-large);
+}
+
+/* Section Titles */
+.section-title {
+  color: var(--re-navy);
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: var(--re-gradient-accent);
+  border-radius: 2px;
+}
+
+/* Enhanced Navigation */
+.header-nav-container {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(203, 213, 225, 0.2);
+  box-shadow: var(--re-shadow-soft);
+}
+
+.nav-link-default, .nav-link-current {
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-link-default:hover {
+  color: var(--re-blue);
+  transform: translateY(-1px);
+}
+
+.nav-link-current {
+  color: var(--re-blue);
+  font-weight: 600;
+}
+
+.nav-link-current::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 3px;
+  background: var(--re-gradient-accent);
+  border-radius: 2px;
+}
+
+/* Services Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Text Enhancements */
+.intro-text, .mission-text, .why-text, .cta-text {
+  color: var(--re-gray-600);
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+.help-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.help-list li {
+  color: var(--re-gray-600);
+  font-size: 1.1rem;
+  margin: 0.75rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.help-list li::before {
+  content: '🏠';
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Service Items */
+.service-title {
+  color: var(--re-navy);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.service-desc {
+  color: var(--re-gray-600);
+  line-height: 1.6;
+}
+
+/* Make Non-Clickable Badges Clearly Static */
+.trust-badge {
+  cursor: default !important; /* Change from pointer */
+  user-select: none;
+}
+
+.trust-badge:hover {
+  transform: none !important; /* Remove hover lift */
+  background: rgba(255, 255, 255, 0.1); /* Subtle change only */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .colored-headline {
+    font-size: 2rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-section, .service-item {
+    padding: 1.5rem;
+  }
+
+  .logo {
+    max-width: 350px;
+    width: 95%;
+    padding: 0.75rem;
+  }
+
+  .logo-main {
+    max-width: 525px; /* 350px * 1.5 for mobile */
+    width: 98%;
+  }
+
+  /* Mobile button adjustments */
+  .cta-button,
+  .primary-cta,
+  .secondary-cta {
+    font-size: 1.125rem;
+    padding: 1rem 2rem;
+  }
+}
+
+/* Animation Classes */
+.fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover Effects for Interactive Elements */
+.clickable {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.clickable:hover {
+  transform: scale(1.02);
+}

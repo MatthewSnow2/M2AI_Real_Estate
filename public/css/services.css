@@ -1,20 +1,81 @@
 /* Services page styles - Updated for real estate focus */
 
+/* CRITICAL: Ensure all elements include padding/border in width calculations */
+* {
+  box-sizing: border-box;
+}
+
+/* Services page hero styles */
+.services-headline-white {
+  color: #ffffff !important;
+  background: none !important;
+  -webkit-text-fill-color: initial !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.services-subheadline-light {
+  color: rgba(255, 255, 255, 0.9) !important;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Remove old row containers - not needed anymore */
+
+/* Centered section container */
+.section-container-centered {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.section-title-centered {
+  text-align: center !important;
+  margin: 0 auto 1rem auto !important;
+  font-size: 1.8rem;
+  width: 100%;
+}
+
+.section-subtitle-centered {
+  text-align: center !important;
+  color: #ffffff !important;
+  margin: 0 auto !important;
+  max-width: 600px;
+  width: 100%;
+}
+
+/* Button sizing to match home page audit button */
+.services-cta-button {
+  width: 291px !important;
+  height: 70px !important;
+  padding: 0 !important;
+  font-size: 1rem !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  white-space: nowrap !important;
+}
+
 /* Stats section for real estate metrics */
 .stats-section {
   background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
   border-radius: 16px;
-  padding: 40px 20px;
-  margin: 40px auto;
-  max-width: 1000px;
+  padding: 2rem;
+  margin: 0;
+  width: 100%;
+  max-width: 1200px; /* Constrain width */
   border: 1px solid rgba(249, 115, 22, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 24px;
-  margin-top: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Smaller min-width */
+  gap: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 .stat-card {
@@ -89,32 +150,39 @@
 .feature-list {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 1rem 0; /* Add vertical spacing */
 }
 
 .feature-list li {
-  padding: 6px 0;
-  color: #475569;
+  padding: 0.75rem 0 0.75rem 2rem; /* Increased padding for better spacing */
+  color: #1e293b; /* Darker for better contrast */
   position: relative;
-  padding-left: 24px;
+  line-height: 1.6;
+  font-size: 1rem;
+  text-indent: 0;
 }
 
 .feature-list li::before {
   content: '✓';
   position: absolute;
   left: 0;
-  color: #f97316;
-  font-weight: bold;
+  top: 0.75rem; /* Align with text baseline */
+  color: #10b981; /* Green checkmark for better visibility */
+  font-weight: 900;
+  font-size: 1.25rem;
+  width: 1.5rem;
+  text-align: center;
 }
 
 .roi-highlight {
   background: rgba(249, 115, 22, 0.08);
   border-left: 4px solid #f97316;
-  padding: 12px 16px;
-  margin: 16px 0;
-  border-radius: 4px;
-  font-weight: 500;
+  padding: 1rem 1.25rem; /* Increased padding */
+  margin: 1.5rem 0; /* More vertical spacing */
+  border-radius: 6px;
+  font-weight: 600; /* Bolder text */
   color: #1e293b;
+  line-height: 1.6;
 }
 
 .section-subtitle {
@@ -128,34 +196,40 @@
 }
 
 .services-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem; /* Uniform 48px spacing between ALL sections */
   margin: 0 auto;
-  max-width: 1100px;
-  padding: 0 8vw 36px 8vw;
-  justify-items: start;
+  max-width: 1200px;
+  padding: 2rem 1rem 3rem 1rem;
   width: 100%;
 }
 
 .service-card {
   background: white;
   border-radius: 16px;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
-  padding: 32px 28px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08), 0 4px 16px rgba(0, 0, 0, 0.04);
+  padding: 2rem;
   color: #1e293b;
   font-size: 1.05rem;
   text-align: left;
   transition: all 0.3s ease;
-  border: 1px solid rgba(226, 232, 240, 0.8);
+  border: 2px solid rgba(226, 232, 240, 0.9);
   width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 800px; /* All cards same max width */
+  margin: 0 auto; /* Center each card */
+  position: relative;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 400px; /* All cards same minimum height */
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .service-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 40px rgba(249, 115, 22, 0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(249, 115, 22, 0.12), 0 12px 40px rgba(0, 0, 0, 0.08);
   border-color: rgba(249, 115, 22, 0.3);
 }
 
@@ -179,27 +253,56 @@
 }
 
 .section-container {
-  width: 100%; 
-  margin-top: 40px; 
-  margin-bottom: 40px; 
-  display: flex; 
+  width: 100%;
+  margin: 0;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 @media (max-width: 900px) {
-  .services-grid { 
-    grid-template-columns: 1fr; 
+  .service-card {
+    padding: 1.5rem;
+  }
+
+  .services-row-2,
+  .services-row-3 {
+    padding: 0 1rem;
   }
 }
 
 @media (max-width: 600px) {
-  .services-grid { 
-    gap: 18px; 
-    padding: 0 4vw 18px 4vw; 
+  .services-grid {
+    padding: 1rem 0.5rem 2rem 0.5rem;
+    gap: 2rem;
   }
-  .service-card { 
-    font-size: 1rem; 
-    padding: 18px 8px; 
+
+  .service-card {
+    font-size: 1rem;
+    padding: 1.25rem;
+    min-height: 200px; /* Reduce on mobile */
+  }
+
+  .services-row-2,
+  .services-row-3 {
+    gap: 1.5rem;
+    grid-template-columns: 1fr !important; /* Force single column */
+  }
+
+  .services-top-row {
+    gap: 1.5rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr 1fr; /* 2 columns on mobile */
+    gap: 1rem;
+  }
+
+  .services-cta-button {
+    width: 260px !important; /* Slightly smaller on mobile */
+    height: 60px !important;
+    font-size: 0.9rem !important;
   }
 }
 

@@ -1,4 +1,4 @@
-/* Main CSS styles for Me Myself Plus AI website */
+/* Main CSS styles for M2AI Real Estate website */
 
 /* Common elements */
 body { 
@@ -76,12 +76,13 @@ body {
 }
 
 .header-nav {
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
-  gap: 2.5rem; 
-  font-family: 'Inter', sans-serif; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(1.5rem, 4vw, 3rem); /* Responsive spacing */
+  font-family: 'Inter', sans-serif;
   font-size: 1.08rem;
+  padding: 0 1rem;
 }
 
 .nav-link-current {
@@ -122,13 +123,68 @@ body {
 }
 
 /* Media queries for responsiveness */
-@media (max-width: 600px) {
-  .logo { 
-    height: 80px; 
-    max-width: 220px; 
+@media (max-width: 768px) {
+  body {
+    padding: 0 1rem; /* Prevent edge-to-edge content */
   }
-  .headline { 
-    font-size: 1.1rem; 
-    margin-top: 12vh; 
+
+  .main-content {
+    padding: 90px 1.25rem 2rem 1.25rem !important;
+  }
+
+  /* Larger touch targets */
+  .cta-button,
+  .primary-cta,
+  .nav-link-default,
+  .nav-link-current {
+    min-height: 48px;
+    min-width: 48px;
+    padding: 1rem 1.5rem;
+  }
+
+  /* Prevent icon/emoji overlap */
+  .trust-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+
+  /* Responsive typography */
+  .headline,
+  .colored-headline {
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+    line-height: 1.25;
+    margin: 1rem 0;
+  }
+
+  .subheadline {
+    font-size: clamp(1rem, 3vw, 1.25rem);
+    line-height: 1.6;
+    padding: 0 0.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo {
+    height: 80px;
+    max-width: 220px;
+  }
+
+  .headline {
+    font-size: 1.1rem;
+    margin-top: 12vh;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 390px) {
+  .main-content {
+    padding: 90px 0.75rem 1rem 0.75rem !important;
+  }
+
+  .cta-button,
+  .primary-cta {
+    font-size: 1rem;
+    padding: 0.875rem 1.25rem;
   }
 }

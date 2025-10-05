@@ -1,6 +1,18 @@
 /* Specific styles for the home page */
 
 /* New hero section styles */
+.hero-headline-white {
+  color: #ffffff !important;
+  background: none !important;
+  -webkit-text-fill-color: initial !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subheadline-light {
+  color: rgba(255, 255, 255, 0.9) !important;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
 .subheadline {
   color: #94a3b8;
   font-size: 1.25rem;
@@ -10,6 +22,20 @@
   margin-bottom: 30px;
   max-width: 700px;
   line-height: 1.6;
+}
+
+.cta-container-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.trust-indicators-white {
+  border-top-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.trust-indicators-white .trust-item {
+  color: rgba(255, 255, 255, 0.9) !important;
 }
 
 .primary-cta {
@@ -130,8 +156,9 @@
 
 .case-study-card {
   background: white;
-  border-radius: 16px;
-  padding: 32px 28px;
+  border-radius: 20px; /* Increased from 16px */
+  padding: 2.5rem; /* Increased from 32px 28px for more breathing room */
+  margin-bottom: 2rem; /* Add vertical spacing */
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
   border: 1px solid rgba(226, 232, 240, 0.8);
   transition: all 0.3s ease;
@@ -170,33 +197,37 @@
   font-size: 1.15rem;
   font-style: italic;
   line-height: 1.6;
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem; /* Increased from 20px */
+  padding-left: 2rem; /* Space for quote mark */
   position: relative;
 }
 
 .case-study-quote::before {
   content: '"';
-  font-size: 4rem;
+  font-size: 5rem; /* Increased from 4rem */
   color: #f97316;
   position: absolute;
-  left: -20px;
-  top: -10px;
+  left: -10px; /* Adjusted positioning */
+  top: -15px;
   font-family: Georgia, serif;
-  opacity: 0.3;
+  opacity: 0.15; /* Reduced opacity for better readability */
 }
 
 .case-study-author {
-  color: #64748b;
+  color: #475569; /* Darker for better contrast */
   font-size: 1rem;
-  margin-bottom: 20px;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
 }
 
 .case-study-stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  padding-top: 20px;
-  border-top: 1px solid #e2e8f0;
+  gap: 2rem; /* Increased from 16px */
+  padding: 2rem 0 0 0; /* Increased padding */
+  margin-top: 1.5rem;
 }
 
 .stat {
@@ -232,16 +263,47 @@
     grid-template-columns: 1fr;
     gap: 24px;
   }
-  
+
+  .case-study-card {
+    margin: 0 0 1.5rem 0;
+    padding: 1.75rem; /* Reduced padding for mobile */
+  }
+
+  .case-study-card.featured {
+    grid-column: span 1;
+  }
+
+  /* Prevent quote overflow */
+  .case-study-quote {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    padding-left: 1rem;
+  }
+
+  .case-study-quote::before {
+    font-size: 3rem;
+    left: -10px;
+    top: -5px;
+  }
+
+  /* Stack stats vertically on mobile */
   .case-study-stats {
     grid-template-columns: 1fr;
-    gap: 12px;
+    gap: 1rem;
+    text-align: left;
+    padding-left: 1rem;
   }
-  
+
+  .stat {
+    border-left: 3px solid #ea580c;
+    padding-left: 1rem;
+    text-align: left;
+  }
+
   .section-title {
     font-size: 2rem;
   }
-  
+
   .section-subtitle {
     font-size: 1.1rem;
   }
@@ -253,6 +315,18 @@
   color: white;
   padding: 60px 0 40px 0;
   margin-top: 80px;
+}
+
+.footer-title-white {
+  text-align: center;
+  color: white !important;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.footer-text-white {
+  color: white !important;
 }
 
 .trust-badges-section h3 {
@@ -280,6 +354,25 @@
   border: 1px solid rgba(249, 115, 22, 0.3);
 }
 
+.trust-badge-white {
+  background: white !important;
+  border: 1px solid rgba(226, 232, 240, 0.8) !important;
+}
+
+.trust-badge-white .badge-text {
+  color: #1e293b !important;
+}
+
+.trust-badge-white .badge-text strong {
+  color: #f97316 !important;
+}
+
+.trust-badge-white:hover {
+  transform: translateY(-2px);
+  background: #f8fafc !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
 .trust-badge:hover {
   transform: translateY(-2px);
   background: rgba(249, 115, 22, 0.1);
@@ -287,8 +380,10 @@
 
 .badge-icon {
   font-size: 2rem;
-  margin-right: 16px;
-  min-width: 50px;
+  margin-right: 1rem;
+  min-width: 3rem; /* Prevent compression */
+  flex-shrink: 0; /* Don't shrink icon */
+  text-align: center;
 }
 
 .badge-text {
@@ -346,14 +441,19 @@
     grid-template-columns: 1fr;
     gap: 20px;
   }
-  
+
   .social-proof-testimonials {
     grid-template-columns: 1fr;
     gap: 16px;
   }
-  
+
   .trust-badges-section h3 {
     font-size: 1.6rem;
+  }
+
+  .badge-icon {
+    font-size: 1.75rem;
+    min-width: 2.5rem;
   }
 }
 

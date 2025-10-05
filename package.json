@@ -1,7 +1,7 @@
 {
-  "name": "me-myself-plus-ai",
+  "name": "m2ai-real-estate",
   "version": "1.0.0",
-  "description": "Boutique AI studio in Nashville. Production-ready, fully responsive website.",
+  "description": "M2AI Real Estate - AI-powered real estate website with modern design and functionality.",
   "main": "server.js",
   "scripts": {
     "dev": "npx tailwindcss -i ./src/styles/components.css -o ./dist/styles.css --watch",

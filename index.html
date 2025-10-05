@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Nashville's trusted automation partner helping real estate professionals save 20+ hours weekly while closing more deals. Expert solutions for Middle Tennessee real estate." />
+  <meta name="description" content="Middle Tennessee's trusted automation partner helping real estate professionals save 20+ hours weekly while closing more deals. Expert solutions for Middle Tennessee real estate." />
   <meta name="keywords" content="real estate automation Nashville, Tennessee real estate consultant, Middle TN real estate technology, real estate CRM automation, Nashville property management automation" />
-  <meta name="author" content="Me, Myself Plus AI" />
-  <meta property="og:title" content="Me, Myself Plus AI | Real Estate Automation Solutions for Nashville" />
+  <meta name="author" content="M2AI Real Estate" />
+  <meta property="og:title" content="M2AI Real Estate | Real Estate Automation Solutions for Nashville" />
   <meta property="og:description" content="Get 20+ hours back every week while growing your real estate business. Trusted automation partner for Middle Tennessee real estate professionals." />
-  <meta property="og:image" content="public/images/FullLogo_Transparent_NoBuffer.png" />
+  <meta property="og:image" content="public/images/M2AI_Logo_New.png" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://memyselfplusai.com/" />
-  <meta property="og:site_name" content="Me, Myself Plus AI" />
+  <meta property="og:url" content="https://m2ai-realestate.com/" />
+  <meta property="og:site_name" content="M2AI Real Estate" />
   <meta property="og:locale" content="en_US" />
   
   <!-- Additional SEO meta tags -->
@@ -26,9 +26,9 @@
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "Me, Myself Plus AI",
+    "name": "M2AI Real Estate",
     "description": "Real estate automation solutions helping Nashville agents save 20+ hours weekly while closing more deals",
-    "url": "https://memyselfplusai.com",
+    "url": "https://m2ai-realestate.com",
     "telephone": "+1-615-XXX-XXXX",
     "address": {
       "@type": "PostalAddress",
@@ -77,14 +77,18 @@
   }
   </script>
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Me, Myself Plus AI" />
+  <meta name="twitter:title" content="M2AI Real Estate" />
   <meta name="twitter:description" content="Real estate automation solutions for Nashville. Save 20+ hours weekly with smart automation." />
-  <meta name="twitter:image" content="public/images/FullLogo_Transparent_NoBuffer.png" />
-  <title>Nashville Real Estate Automation | Save 20+ Hours Weekly | Me, Myself Plus AI</title>
-  <link rel="icon" type="image/png" href="public/images/FullLogo_Transparent_NoBuffer.png" />
+  <meta name="twitter:image" content="public/images/M2AI_Logo_New.png" />
+  <title>Nashville Real Estate Automation | Save 20+ Hours Weekly | M2AI Real Estate</title>
+  <link rel="icon" type="image/png" href="public/images/M2AI_Logo_New.png" />
+  <link rel="stylesheet" href="public/css/typography.css">
+  <link rel="stylesheet" href="public/css/accessibility.css">
   <link rel="stylesheet" href="public/css/navigation.css">
   <link rel="stylesheet" href="public/css/main.css">
+  <link rel="stylesheet" href="public/css/real-estate-theme.css">
   <link rel="stylesheet" href="public/css/index.css">
+  <link rel="stylesheet" href="public/css/audit-modal.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -92,27 +96,29 @@
   <!-- Styles moved to external CSS files -->
 </head>
 <body>
+  <!-- Skip to main content link for keyboard navigation -->
+  <a href="#main-content" class="skip-to-main">Skip to main content</a>
+
   <canvas id="bg-canvas"></canvas>
-  
-  <!-- Fixed navigation header using classes from external CSS -->  
-  <div class="header-nav-container">
-    <nav class="header-nav">
-      <a href="index.html" class="nav-link-current">Home</a>
+
+  <!-- Fixed navigation header using semantic HTML -->
+  <header class="header-nav-container">
+    <nav class="header-nav" aria-label="Main navigation">
+      <a href="index.html" class="nav-link-current" aria-current="page">Home</a>
       <a href="about.html" class="nav-link-default">About</a>
       <a href="services.html" class="nav-link-default">Services</a>
       <a href="contact.html" class="nav-link-default">Contact</a>
     </nav>
-  </div>
-  
-  <div class="main-content">
-    <img src="public/images/FullLogo_Transparent_NoBuffer.png" alt="Me Myself Plus AI Logo" class="logo" />
-    <div class="headline">Get 20+ Hours Back Every Week While Growing Your Real Estate Business</div>
-    <div class="subheadline">Nashville's trusted automation partner helping real estate professionals close more deals with less effort</div>
-    <div class="cta-container">
-      <a href="contact.html" class="cta-button primary-cta">See How We Save Agents 20 Hours/Week</a>
-      <a href="#services" class="cta-button secondary-cta">Explore Solutions</a>
+  </header>
+
+  <main id="main-content" class="main-content">
+    <img src="public/images/M2AI_Logo_New.png?v=4" alt="M2AI Real Estate - AI Automation for Real Estate Professionals" class="logo logo-main" />
+    <h1 class="headline colored-headline hero-headline-white">Get 20+ Hours Back Every Week While Growing Your Real Estate Business</h1>
+    <p class="subheadline hero-subheadline-light">Middle Tennessee's trusted automation partner helping real estate professionals close more deals with less effort</p>
+    <div class="cta-container cta-container-centered">
+      <a href="services.html" class="cta-button secondary-cta">Explore Solutions</a>
     </div>
-    <div class="trust-indicators">
+    <div class="trust-indicators trust-indicators-white">
       <span class="trust-item">🏆 Serving Middle Tennessee Since 2024</span>
       <span class="trust-item">⏰ Average 20+ Hours Saved Weekly</span>
       <span class="trust-item">🏠 Trusted by 50+ Real Estate Professionals</span>
@@ -122,19 +128,22 @@
   <!-- Success Stories Section -->
   <section id="success-stories" class="success-stories-section">
     <div class="container">
+      <div class="cta-container cta-container-centered" style="margin-bottom: 3rem;">
+        <button id="audit-btn" class="cta-button audit-cta" aria-label="Open free AI audit form">Get Your Free AI Audit</button>
+      </div>
       <h2 class="section-title">Real Results from Nashville Real Estate Professionals</h2>
       <p class="section-subtitle">See how automation is transforming businesses just like yours</p>
       
       <div class="case-studies-grid">
-        <div class="case-study-card featured">
-          <div class="case-study-badge">Featured Success</div>
+        <figure class="case-study-card featured">
+          <div class="case-study-badge" role="img" aria-label="Featured success story">Featured Success</div>
           <div class="case-study-content">
-            <div class="case-study-quote">
-              "I went from working 70-hour weeks to closing 30% more deals in just 40 hours. The AI voice agent alone saved me 15 hours a week!"
-            </div>
-            <div class="case-study-author">
-              <strong>Sarah M.</strong> - Top Producer, RE/MAX Nashville
-            </div>
+            <blockquote class="case-study-quote">
+              <p>"I went from working 70-hour weeks to closing 30% more deals in just 40 hours. The AI voice agent alone saved me 15 hours a week!"</p>
+            </blockquote>
+            <figcaption class="case-study-author">
+              <strong>Nashville Real Estate Professional</strong>
+            </figcaption>
             <div class="case-study-stats">
               <div class="stat">
                 <span class="stat-number">15</span>
@@ -145,12 +154,12 @@
                 <span class="stat-label">More Deals Closed</span>
               </div>
               <div class="stat">
-                <span class="stat-number">2</span>
-                <span class="stat-label">Week Implementation</span>
+                <span class="stat-number">14</span>
+                <span class="stat-label">Days to Full Setup</span>
               </div>
             </div>
           </div>
-        </div>
+        </figure>
         
         <div class="case-study-card">
           <div class="case-study-content">
@@ -158,7 +167,7 @@
               "My lead response time went from 2 hours to 30 seconds. I'm converting 40% more online leads now."
             </div>
             <div class="case-study-author">
-              <strong>Mike T.</strong> - Broker/Owner, Franklin
+              <strong>Real Estate Broker</strong> - Franklin
             </div>
             <div class="case-study-highlight">
               ROI: $45,000 additional commission in first 6 months
@@ -172,7 +181,7 @@
               "The transaction management automation eliminated 90% of my paperwork stress. Closings happen seamlessly now."
             </div>
             <div class="case-study-author">
-              <strong>Jennifer L.</strong> - Team Leader, Brentwood
+              <strong>Real Estate Team Leader</strong> - Brentwood
             </div>
             <div class="case-study-highlight">
               Zero compliance issues in 18 months
@@ -188,70 +197,276 @@
   </section>
   
   <!-- Trust and Social Proof Footer -->
-  <footer class="trust-footer">
+  <footer class="trust-footer trust-footer-white">
     <div class="container">
       <div class="trust-badges-section">
-        <h3>Trusted by Nashville's Top Real Estate Professionals</h3>
-        
+        <h3 class="footer-title-white">Trusted by Middle Tennessee's Top Real Estate Professionals</h3>
+
         <div class="trust-badges-grid">
-          <div class="trust-badge">
-            <div class="badge-icon">🏆</div>
+          <div class="trust-badge trust-badge-white" role="img" aria-label="Professional Real Estate Association member badge">
+            <div class="badge-icon" aria-hidden="true">🏆</div>
             <div class="badge-text">
-              <strong>Greater Nashville REALTORS®</strong><br>
+              <strong>Professional Real Estate Association</strong><br>
               Professional Member
             </div>
           </div>
-          
-          <div class="trust-badge">
-            <div class="badge-icon">🔒</div>
+
+          <div class="trust-badge trust-badge-white" role="img" aria-label="Tennessee ELVIS Act compliant systems badge">
+            <div class="badge-icon" aria-hidden="true">🔒</div>
             <div class="badge-text">
               <strong>Tennessee ELVIS Act</strong><br>
               Compliant Systems
             </div>
           </div>
-          
-          <div class="trust-badge">
-            <div class="badge-icon">✅</div>
+
+          <div class="trust-badge trust-badge-white" role="img" aria-label="50 plus agents served in Middle Tennessee">
+            <div class="badge-icon" aria-hidden="true">✅</div>
             <div class="badge-text">
               <strong>50+ Agents Served</strong><br>
               Middle Tennessee
             </div>
           </div>
-          
-          <div class="trust-badge">
-            <div class="badge-icon">📈</div>
+
+          <div class="trust-badge trust-badge-white" role="img" aria-label="2 million dollars plus additional client revenue generated">
+            <div class="badge-icon" aria-hidden="true">📈</div>
             <div class="badge-text">
               <strong>$2M+ Additional</strong><br>
               Client Revenue Generated
             </div>
           </div>
         </div>
-        
+
         <div class="social-proof-testimonials">
           <div class="mini-testimonial">
-            <div class="mini-quote">"Best investment I've made in my real estate career. ROI was immediate."</div>
-            <div class="mini-author">- Lisa K., Keller Williams Nashville</div>
+            <div class="mini-quote footer-text-white">"Best investment I've made in my real estate career. ROI was immediate."</div>
+            <div class="mini-author footer-text-white">- Licensed Real Estate Agent</div>
           </div>
-          
+
           <div class="mini-testimonial">
-            <div class="mini-quote">"Went from rookie to top 10% in my brokerage in 8 months using these systems."</div>
-            <div class="mini-author">- Carlos R., RE/MAX Elite</div>
+            <div class="mini-quote footer-text-white">"Went from rookie to top 10% in my brokerage in 8 months using these systems."</div>
+            <div class="mini-author footer-text-white">- Real Estate Professional</div>
           </div>
-          
+
           <div class="mini-testimonial">
-            <div class="mini-quote">"Finally have my evenings and weekends back. Automation handles everything."</div>
-            <div class="mini-author">- Michelle T., Compass Nashville</div>
+            <div class="mini-quote footer-text-white">"Finally have my evenings and weekends back. Automation handles everything."</div>
+            <div class="mini-author footer-text-white">- Nashville Realtor</div>
           </div>
         </div>
-        
-        <div class="location-badge">
+
+        <div class="location-badge footer-text-white">
           📍 <strong>Proudly Serving:</strong> Nashville, Franklin, Brentwood, Murfreesboro, Hermitage, and all of Middle Tennessee
         </div>
       </div>
     </div>
   </footer>
   
+  <!-- M2AI Quick Consulting Audit Modal -->
+  <div id="audit-modal" class="audit-modal">
+    <div class="audit-modal-content">
+      <div class="audit-modal-header">
+        <h2>M2AI Quick Consulting Audit</h2>
+        <button class="audit-close" id="close-audit">&times;</button>
+      </div>
+      <form id="audit-form" class="audit-form">
+        <div class="audit-form-group">
+          <label for="companyName">Company Name *</label>
+          <input type="text" id="companyName" name="companyName" required>
+        </div>
+
+        <div class="audit-form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="audit-form-group">
+          <label for="industry">Industry *</label>
+          <select id="industry" name="industry" required>
+            <option value="">Select your industry</option>
+            <option value="Real Estate - Residential">Real Estate - Residential</option>
+            <option value="Real Estate - Commercial">Real Estate - Commercial</option>
+            <option value="Property Management">Property Management</option>
+            <option value="Real Estate Investment">Real Estate Investment</option>
+            <option value="Title & Escrow">Title & Escrow</option>
+            <option value="Mortgage & Lending">Mortgage & Lending</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="audit-form-group">
+          <label for="companySize">Company Size *</label>
+          <select id="companySize" name="companySize" required>
+            <option value="">Select company size</option>
+            <option value="1-5 employees">1-5 employees</option>
+            <option value="6-10 employees">6-10 employees</option>
+            <option value="11-25 employees">11-25 employees</option>
+            <option value="26-50 employees">26-50 employees</option>
+            <option value="51-100 employees">51-100 employees</option>
+            <option value="100+ employees">100+ employees</option>
+          </select>
+        </div>
+
+        <div class="audit-form-group">
+          <label>Current AI Usage *</label>
+          <div class="audit-radio-group">
+            <label class="audit-radio-label">
+              <input type="radio" name="aiUsage" value="No AI tools currently in use" required>
+              <span>No AI tools currently in use</span>
+            </label>
+            <label class="audit-radio-label">
+              <input type="radio" name="aiUsage" value="Basic AI tools (ChatGPT, etc.)">
+              <span>Basic AI tools (ChatGPT, etc.)</span>
+            </label>
+            <label class="audit-radio-label">
+              <input type="radio" name="aiUsage" value="Some integrated AI solutions">
+              <span>Some integrated AI solutions</span>
+            </label>
+            <label class="audit-radio-label">
+              <input type="radio" name="aiUsage" value="Advanced AI implementation">
+              <span>Advanced AI implementation</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="audit-form-group">
+          <label>Primary Business Challenge *</label>
+          <div class="audit-radio-group">
+            <label class="audit-radio-label">
+              <input type="radio" name="challenge" value="Customer support & response times" required>
+              <span>Customer support & response times</span>
+            </label>
+            <label class="audit-radio-label">
+              <input type="radio" name="challenge" value="Lead generation & qualification">
+              <span>Lead generation & qualification</span>
+            </label>
+            <label class="audit-radio-label">
+              <input type="radio" name="challenge" value="Manual processes & repetitive tasks">
+              <span>Manual processes & repetitive tasks</span>
+            </label>
+            <label class="audit-radio-label">
+              <input type="radio" name="challenge" value="Data analysis & insights">
+              <span>Data analysis & insights</span>
+            </label>
+            <label class="audit-radio-label">
+              <input type="radio" name="challenge" value="Document management & contracts">
+              <span>Document management & contracts</span>
+            </label>
+            <label class="audit-radio-label">
+              <input type="radio" name="challenge" value="Other">
+              <span>Other</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="audit-form-group">
+          <label for="budget">Monthly AI Budget Range</label>
+          <select id="budget" name="budget">
+            <option value="">Select budget range (optional)</option>
+            <option value="Under $500/month">Under $500/month</option>
+            <option value="$500-$1,500/month">$500-$1,500/month</option>
+            <option value="$1,500-$5,000/month">$1,500-$5,000/month</option>
+            <option value="$5,000-$10,000/month">$5,000-$10,000/month</option>
+            <option value="$10,000+/month">$10,000+/month</option>
+          </select>
+        </div>
+
+        <div class="audit-form-group">
+          <label for="additionalInfo">Additional Information</label>
+          <textarea id="additionalInfo" name="additionalInfo" rows="4" placeholder="Tell us more about your specific needs, current pain points, or goals..."></textarea>
+        </div>
+
+        <button type="submit" class="audit-submit-btn">Submit AI Audit Request</button>
+        <div id="audit-status" class="audit-status"></div>
+      </form>
+    </div>
+  </div>
+
   <script>
+    // AI Audit Modal functionality
+    const auditModal = document.getElementById('audit-modal');
+    const auditBtn = document.getElementById('audit-btn');
+    const closeAudit = document.getElementById('close-audit');
+    const auditForm = document.getElementById('audit-form');
+    const auditStatus = document.getElementById('audit-status');
+
+    // Open modal
+    auditBtn.addEventListener('click', () => {
+      auditModal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    });
+
+    // Close modal
+    closeAudit.addEventListener('click', () => {
+      auditModal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    });
+
+    // Close modal on outside click
+    window.addEventListener('click', (e) => {
+      if (e.target === auditModal) {
+        auditModal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+    });
+
+    // Handle form submission
+    auditForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const submitBtn = auditForm.querySelector('.audit-submit-btn');
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = 'Submitting...';
+      submitBtn.disabled = true;
+      auditStatus.textContent = '';
+      auditStatus.className = 'audit-status';
+
+      const formData = new FormData(auditForm);
+      const data = {
+        companyName: formData.get('companyName'),
+        email: formData.get('email'),
+        industry: formData.get('industry'),
+        companySize: formData.get('companySize'),
+        aiUsage: formData.get('aiUsage'),
+        challenge: formData.get('challenge'),
+        budget: formData.get('budget'),
+        additionalInfo: formData.get('additionalInfo')
+      };
+
+      try {
+        // Fire and forget - don't wait for n8n response
+        fetch('https://im4tlai.app.n8n.cloud/webhook/self-serve-audit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+          mode: 'cors'
+        }).then(response => {
+          console.log('Audit submitted - Response status:', response.status);
+        }).catch(error => {
+          console.error('Background submission error (non-critical):', error);
+        });
+
+        // Show immediate success message
+        auditStatus.textContent = '✅ Form submitted successfully! Your AI Audit report will be sent to your email shortly.';
+        auditStatus.className = 'audit-status audit-status-success';
+        auditForm.reset();
+
+        setTimeout(() => {
+          auditModal.style.display = 'none';
+          document.body.style.overflow = 'auto';
+          auditStatus.textContent = '';
+        }, 3000);
+
+      } catch (error) {
+        console.error('Form submission error:', error);
+        auditStatus.textContent = '❌ Something went wrong. Please try again or contact us directly.';
+        auditStatus.className = 'audit-status audit-status-error';
+      } finally {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+      }
+    });
+
     // Add timestamp to form when page loads
     document.addEventListener('DOMContentLoaded', function() {
       const timestampField = document.getElementById('timestamp-field');

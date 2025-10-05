@@ -4,71 +4,77 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Get your free real estate automation consultation. Book a call to discover how to save 20+ hours weekly and close more deals in Nashville." />
-  <title>Free Nashville Real Estate Automation Consultation | Book Now | Me, Myself Plus AI</title>
+  <title>Free Nashville Real Estate Automation Consultation | Book Now | M2AI Real Estate</title>
   
   <!-- Additional SEO meta tags -->
   <meta name="robots" content="index, follow" />
   <meta name="geo.region" content="US-TN" />
   <meta name="geo.placename" content="Nashville, Tennessee" />
-  <link rel="icon" type="image/png" href="public/images/FullLogo_Transparent_NoBuffer.png" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" />
+  <link rel="icon" type="image/png" href="public/images/M2AI_Logo_New.png" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="public/css/typography.css">
+  <link rel="stylesheet" href="public/css/accessibility.css">
   <link rel="stylesheet" href="public/css/navigation.css">
   <link rel="stylesheet" href="public/css/main.css">
+  <link rel="stylesheet" href="public/css/real-estate-theme.css">
   <link rel="stylesheet" href="public/css/contact.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" />
   <!-- Styles moved to external CSS files -->
 </head>
 <body>
+  <!-- Skip to main content link -->
+  <a href="#main-content" class="skip-to-main">Skip to main content</a>
+
   <canvas id="bg-canvas"></canvas>
-  
-  <!-- Fixed navigation header using classes from external CSS -->  
-  <div class="header-nav-container">
-    <nav class="header-nav">
+
+  <!-- Fixed navigation header -->
+  <header class="header-nav-container">
+    <nav class="header-nav" aria-label="Main navigation">
       <a href="index.html" class="nav-link-default">Home</a>
       <a href="about.html" class="nav-link-default">About</a>
       <a href="services.html" class="nav-link-default">Services</a>
-      <a href="contact.html" class="nav-link-current">Contact</a>
+      <a href="contact.html" class="nav-link-current" aria-current="page">Contact</a>
     </nav>
-  </div>
-  
-  <div class="main-content">
-    <img src="public/images/FullLogo_Transparent_NoBuffer.png" alt="Me Myself Plus AI Logo" class="logo" />
-    <div class="headline">Ready to Reclaim 20+ Hours Every Week?</div>
-    <div class="subheadline">Book your free consultation to discover which automation solutions will have the biggest impact on your real estate business.</div>
+  </header>
+
+  <main id="main-content" class="main-content">
+    <img src="public/images/M2AI_Logo_New.png" alt="M2AI Real Estate - AI Automation for Real Estate Professionals" class="logo" />
+    <h1 class="headline colored-headline contact-headline-white">Ready to Reclaim 20+ Hours Every Week?</h1>
+    <p class="subheadline contact-subheadline-light">Book your free consultation to discover which automation solutions will have the biggest impact on your real estate business.</p>
     <div class="calendly-cta-container">
-      <a href="https://calendly.com/matthew-memyselfplusai/30min" class="calendly-cta-button primary-cta" target="_blank" rel="noopener">📅 Book Your Free 30-Minute Strategy Call</a>
+      <a href="https://calendly.com/matthew-memyselfplusai/new-meeting" class="calendly-cta-button primary-cta" target="_blank" rel="noopener">📅 Book Your Free 30-Minute Strategy Call</a>
     </div>
     <div class="contact-section">
       <div class="form-intro">
-        <h3>📝 Or Tell Us About Your Business Below</h3>
-        <p>Help us understand your current challenges so we can provide the most relevant solutions during your consultation.</p>
+        <h3 class="contact-form-intro-white">📝 Or Tell Us About Your Business Below</h3>
+        <p class="contact-form-intro-light">Help us understand your current challenges so we can provide the most relevant solutions during your consultation.</p>
       </div>
       
       <!-- Enhanced lead qualification form -->
-      <form id="contact-form" action="https://formspree.io/f/xrgdvyjv" method="POST" class="contact-form enhanced">
+      <form id="contact-form" class="contact-form enhanced">
           <input type="hidden" name="_subject" value="New Real Estate Lead - Website Contact Form">
-          <input type="hidden" name="form_source" value="memyselfplusai.com">
+          <input type="hidden" name="form_source" value="m2ai-realestate.com">
           <input type="hidden" name="submission_timestamp" id="timestamp-field">
           
           <div class="form-row">
             <div class="form-field half">
-              <label for="name" class="form-label">Full Name *</label>
-              <input type="text" id="name" name="name" required class="form-input">
+              <label for="name" class="form-label">Full Name <span aria-label="required">*</span></label>
+              <input type="text" id="name" name="name" required class="form-input" aria-required="true" autocomplete="name">
             </div>
             <div class="form-field half">
-              <label for="email" class="form-label">Email Address *</label>
-              <input type="email" id="email" name="email" required class="form-input">
+              <label for="email" class="form-label">Email Address <span aria-label="required">*</span></label>
+              <input type="email" id="email" name="email" required class="form-input" aria-required="true" autocomplete="email">
             </div>
           </div>
           
           <div class="form-row">
             <div class="form-field half">
-              <label for="phone" class="form-label">Phone Number</label>
-              <input type="tel" id="phone" name="phone" class="form-input">
+              <label for="phone" class="form-label optional">Phone Number</label>
+              <input type="tel" id="phone" name="phone" class="form-input" autocomplete="tel">
             </div>
             <div class="form-field half">
-              <label for="business_type" class="form-label">I am a... *</label>
-              <select id="business_type" name="business_type" required class="form-select">
+              <label for="business_type" class="form-label">I am a... <span aria-label="required">*</span></label>
+              <select id="business_type" name="business_type" required class="form-select" aria-required="true">
                 <option value="">Select one</option>
                 <option value="individual_agent">Individual Real Estate Agent</option>
                 <option value="team_leader">Team Leader</option>
@@ -79,8 +85,8 @@
           </div>
           
           <div class="form-field">
-            <label for="main_challenge" class="form-label">What's your biggest time-waster right now? *</label>
-            <select id="main_challenge" name="main_challenge" required class="form-select">
+            <label for="main_challenge" class="form-label">What's your biggest time-waster right now? <span aria-label="required">*</span></label>
+            <select id="main_challenge" name="main_challenge" required class="form-select" aria-required="true">
               <option value="">Select your main challenge</option>
               <option value="lead_response">Slow lead response times</option>
               <option value="admin_tasks">Too much administrative work</option>
@@ -93,18 +99,18 @@
           </div>
           
           <div class="form-field">
-            <label for="current_tools" class="form-label">What tools do you currently use? (CRM, lead sources, etc.)</label>
+            <label for="current_tools" class="form-label optional">What tools do you currently use? (CRM, lead sources, etc.)</label>
             <textarea id="current_tools" name="current_tools" rows="3" class="form-textarea" placeholder="e.g., Chime, BoomTown, Zillow leads..."></textarea>
           </div>
-          
+
           <div class="form-field">
-            <label for="message" class="form-label">Anything else you'd like us to know?</label>
+            <label for="message" class="form-label optional">Anything else you'd like us to know?</label>
             <textarea id="message" name="message" rows="4" class="form-textarea" placeholder="Tell us about your goals, current pain points, or specific questions..."></textarea>
           </div>
           
           <button type="submit" class="form-button primary-cta">🚀 Get My Free Automation Strategy</button>
       </form>
-      <div id="form-error" class="hidden" style="color: red; margin-top: 1em;">Something went wrong. Please try again later.</div>
+      <div id="form-error" class="hidden error-message" role="alert">Something went wrong. Please try again later.</div>
       <!-- Success message, hidden by default -->
       <div id="form-success" class="hidden">
         <div class="success-section">
@@ -196,21 +202,46 @@
       const form = e.target;
       const data = new FormData(form);
       const errorDiv = document.getElementById('form-error');
+      const submitBtn = form.querySelector('.form-button');
+      const originalBtnText = submitBtn.textContent;
+
       errorDiv.classList.add('hidden');
+      submitBtn.textContent = 'Sending...';
+      submitBtn.disabled = true;
+
       try {
-        const response = await fetch(form.action, {
+        const formDataObj = Object.fromEntries(data);
+        console.log('Submitting contact form');
+        console.log('Form data:', formDataObj);
+
+        const response = await fetch('https://im4tlai.app.n8n.cloud/webhook/contact-form', {
           method: 'POST',
-          body: data,
-          headers: { 'Accept': 'application/json' }
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(formDataObj)
         });
+
+        console.log('Response status:', response.status);
+        const responseText = await response.text();
+        console.log('Response body:', responseText);
+
         if (response.ok) {
           form.classList.add('hidden');
           document.getElementById('form-success').classList.remove('hidden');
         } else {
+          console.error('Form submission failed:', response.status, responseText);
+          errorDiv.textContent = `Error: ${response.status}. Please try again or email us directly.`;
           errorDiv.classList.remove('hidden');
         }
       } catch (err) {
+        console.error('Form submission error:', err);
+        errorDiv.textContent = 'Network error. Please check your connection and try again.';
         errorDiv.classList.remove('hidden');
+      } finally {
+        submitBtn.textContent = originalBtnText;
+        submitBtn.disabled = false;
       }
     });
   </script>
