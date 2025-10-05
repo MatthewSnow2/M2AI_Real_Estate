@@ -477,12 +477,82 @@
   </script>
 
   <!-- N8N Chat Widget -->
-  <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
-  <script type="module">
-    import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
-
-    createChat({
-      webhookUrl: 'https://im4tlai.app.n8n.cloud/webhook/chat'
+  <script type="module" defer>
+    import Chatbot from "https://cdn.n8nchatui.com/v1/embed.js";
+    Chatbot.init({
+      "n8nChatUrl": "https://im4tlai.app.n8n.cloud/webhook/chat",
+      "metadata": {},
+      "theme": {
+        "button": {
+          "backgroundColor": "#14b8a6",
+          "right": 20,
+          "bottom": 20,
+          "size": 60,
+          "iconColor": "#ffffff",
+          "customIconSrc": "https://www.svgrepo.com/show/339963/chat-bot.svg",
+          "customIconSize": 40,
+          "customIconBorderRadius": 15,
+          "autoWindowOpen": {
+            "autoOpen": false,
+            "openDelay": 2
+          },
+          "borderRadius": "rounded"
+        },
+        "tooltip": {
+          "showTooltip": true,
+          "tooltipMessage": "Need help with real estate automation?",
+          "tooltipBackgroundColor": "#1e293b",
+          "tooltipTextColor": "#ffffff",
+          "tooltipFontSize": 14
+        },
+        "chatWindow": {
+          "borderRadiusStyle": "rounded",
+          "avatarBorderRadius": 25,
+          "messageBorderRadius": 6,
+          "showTitle": true,
+          "title": "M2AI Real Estate Assistant",
+          "titleAvatarSrc": "https://www.svgrepo.com/show/339963/chat-bot.svg",
+          "avatarSize": 40,
+          "welcomeMessage": "Hello! I'm your M2AI Real Estate assistant. How can I help you automate your real estate business today?",
+          "errorMessage": "Sorry, I'm having trouble connecting. Please try again later.",
+          "backgroundColor": "#ffffff",
+          "height": 600,
+          "width": 400,
+          "fontSize": 16,
+          "starterPrompts": [
+            "Tell me about your automation services",
+            "How can AI help my real estate business?"
+          ],
+          "starterPromptFontSize": 14,
+          "renderHTML": false,
+          "clearChatOnReload": false,
+          "showScrollbar": false,
+          "botMessage": {
+            "backgroundColor": "#14b8a6",
+            "textColor": "#ffffff",
+            "showAvatar": true,
+            "avatarSrc": "https://www.svgrepo.com/show/334455/bot.svg",
+            "showCopyToClipboardIcon": false
+          },
+          "userMessage": {
+            "backgroundColor": "#f1f5f9",
+            "textColor": "#1e293b",
+            "showAvatar": true,
+            "avatarSrc": "https://www.svgrepo.com/show/532363/user-alt-1.svg"
+          },
+          "textInput": {
+            "placeholder": "Type your message...",
+            "backgroundColor": "#ffffff",
+            "textColor": "#1e293b",
+            "sendButtonColor": "#14b8a6",
+            "maxChars": 500,
+            "maxCharsWarningMessage": "Please keep your message under 500 characters.",
+            "autoFocus": false,
+            "borderRadius": 6,
+            "sendButtonBorderRadius": 50
+          }
+        }
+      }
     });
   </script>
 </body>

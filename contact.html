@@ -247,12 +247,46 @@
   </script>
 
   <!-- N8N Chat Widget -->
-  <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
-  <script type="module">
-    import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
-
-    createChat({
-      webhookUrl: 'https://im4tlai.app.n8n.cloud/webhook/chat'
+  <script type="module" defer>
+    import Chatbot from "https://cdn.n8nchatui.com/v1/embed.js";
+    Chatbot.init({
+      "n8nChatUrl": "https://im4tlai.app.n8n.cloud/webhook/chat",
+      "metadata": {},
+      "theme": {
+        "button": {
+          "backgroundColor": "#14b8a6",
+          "right": 20,
+          "bottom": 20,
+          "size": 60,
+          "iconColor": "#ffffff",
+          "borderRadius": "rounded"
+        },
+        "tooltip": {
+          "showTooltip": true,
+          "tooltipMessage": "Need help with real estate automation?",
+          "tooltipBackgroundColor": "#1e293b",
+          "tooltipTextColor": "#ffffff"
+        },
+        "chatWindow": {
+          "title": "M2AI Real Estate Assistant",
+          "welcomeMessage": "Hello! I'm your M2AI Real Estate assistant. How can I help you automate your real estate business today?",
+          "backgroundColor": "#ffffff",
+          "height": 600,
+          "width": 400,
+          "botMessage": {
+            "backgroundColor": "#14b8a6",
+            "textColor": "#ffffff"
+          },
+          "userMessage": {
+            "backgroundColor": "#f1f5f9",
+            "textColor": "#1e293b"
+          },
+          "textInput": {
+            "placeholder": "Type your message...",
+            "sendButtonColor": "#14b8a6"
+          }
+        }
+      }
     });
   </script>
 </body>
