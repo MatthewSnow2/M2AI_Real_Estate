@@ -152,17 +152,22 @@
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 30px;
   margin-bottom: 50px;
+  align-items: stretch;
 }
 
 .case-study-card {
   background: white;
-  border-radius: 20px; /* Increased from 16px */
-  padding: 2.5rem; /* Increased from 32px 28px for more breathing room */
-  margin-bottom: 2rem; /* Add vertical spacing */
+  border-radius: 20px;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
   border: 1px solid rgba(226, 232, 240, 0.8);
   transition: all 0.3s ease;
   position: relative;
+  min-height: fit-content;
+  height: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .case-study-card:hover {
@@ -192,13 +197,19 @@
   display: inline-block;
 }
 
+.case-study-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
 .case-study-quote {
   color: #1e293b;
   font-size: 1.15rem;
   font-style: italic;
   line-height: 1.6;
-  margin-bottom: 1.5rem; /* Increased from 20px */
-  padding-left: 2rem; /* Space for quote mark */
+  margin-bottom: 1.5rem;
+  padding-left: 2rem;
   position: relative;
 }
 
