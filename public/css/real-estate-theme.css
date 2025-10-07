@@ -67,7 +67,7 @@ body::before {
   max-width: 480px;
   width: 90%;
   height: auto;
-  margin: 2rem auto;
+  margin: 3rem auto 2rem auto;
   display: block;
   filter: drop-shadow(0 8px 16px rgba(0, 35, 73, 0.3)) drop-shadow(0 4px 8px rgba(0, 35, 73, 0.2));
   transition: all 0.4s ease;
